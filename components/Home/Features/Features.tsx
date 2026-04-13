@@ -1,19 +1,22 @@
 import React from "react";
 import Image from "next/image";
-import { GoWorkflow } from "react-icons/go";
-import { LuPen } from "react-icons/lu";
-import { MdAccessAlarm, MdOutlineTouchApp } from "react-icons/md";
-
+// import { GoWorkflow } from "react-icons/go";
+// import { LuPen } from "react-icons/lu";
+// import { MdAccessAlarm, MdOutlineTouchApp } from "react-icons/md";
+import { LuLayers, LuCpu, LuPuzzle, LuUserCheck } from "react-icons/lu";
 const Features = () => {
   return (
-    <div className="pt-16 pb-16 bg-gray-200">
+    <div className="pt-16 pb-16 bg-transparent">
       <div>
-        <h1 className="text-center text-2xl text-blue-950 font-bold">
-          Key Features Of The Product
+        <h1 className="text-center text-2xl text-blue-300 font-bold">
+          Why Choose Synaptra?
         </h1>
-        <p className="mt-3 text-center font-medium text-gray-700 w-[90%] mx-auto sm:w-[70%] md:w-[50%]">
-          Our product stands out with its high performance, delivering
-          blazing-fast speeds and seamless multitasking
+        <p className="mt-3 text-center font-medium text-white w-[90%] mx-auto sm:w-[70%] md:w-[50%]">
+          At Synaptra, we combine technical expertise, innovative thinking,
+          and industry best practices to deliver digital solutions that
+          drive measurable business growth. Our team focuses on building
+          scalable, secure, and future-ready systems that empower businesses
+          to succeed in the digital era.
         </p>
       </div>
       {/**Main Grid */}
@@ -24,23 +27,22 @@ const Features = () => {
           <div
             data-aos="fade-right"
             data-aos-anchor-placement="top-center"
-            className="bg-white p-4 rounded-lg"
+            className="bg-white p-4 rounded-lg h-full flex flex-col"
           >
             <div className="flex items-center space-x-3">
               {/**Icon */}
               <div className="w-12 h-12 rounded-3xl flex items-center justify-center flex-col bg-blue-500 bg-opacity-20">
-                <MdOutlineTouchApp className="w-6 h-6 text-blue-400" />
+                <LuUserCheck className="w-6 h-6 text-blue-400" />
               </div>
               {/**Heading */}
               <h1 className="text-lg font-bold text-gray-700">
-                App Integration
+                Expert-Led Teams
               </h1>
             </div>
             {/**Description */}
             <p className="mt-3 mb-3 text-gray-700 leading-relaxed">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias quis consequatur esse amet possimus debitis assumenda
-              libero
+              Every department at Synaptra is led by experienced professionals
+              with deep industry knowledge and technical expertise.
             </p>
           </div>
           {/**2nd Box */}
@@ -48,23 +50,22 @@ const Features = () => {
             data-aos="fade-right"
             data-aos-anchor-placement="top-center"
             data-aos-delay="100"
-            className="bg-white p-4 rounded-lg"
+            className="bg-white p-4 rounded-lg h-full flex flex-col"
           >
             <div className="flex items-center space-x-3">
               {/**Icon */}
               <div className="w-12 h-12 rounded-3xl flex items-center justify-center flex-col bg-blue-500 bg-opacity-20">
-                <GoWorkflow className="w-6 h-6 text-blue-400" />
+                <LuPuzzle className="w-6 h-6 text-blue-400" />
               </div>
               {/**Heading */}
               <h1 className="text-lg font-bold text-gray-700">
-                Workflow Builder
+                Custom-Built Solutions
               </h1>
             </div>
             {/**Description */}
             <p className="mt-3 mb-3 text-gray-700 leading-relaxed">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias quis consequatur esse amet possimus debitis assumenda
-              libero
+              We don&apos;t believe in one-size-fits-all solutions. Every product
+              and service is tailored to match your business needs.
             </p>
           </div>
           {/**3rd Box */}
@@ -72,23 +73,22 @@ const Features = () => {
             data-aos="fade-right"
             data-aos-anchor-placement="top-center"
             data-aos-delay="200"
-            className="bg-white p-4 rounded-lg"
+            className="bg-white p-4 rounded-lg h-full flex flex-col"
           >
             <div className="flex items-center space-x-3">
               {/**Icon */}
               <div className="w-12 h-12 rounded-3xl flex items-center justify-center flex-col bg-blue-500 bg-opacity-20">
-                <LuPen className="w-6 h-6 text-blue-400" />
+                <LuCpu className="w-6 h-6 text-blue-400" />
               </div>
               {/**Heading */}
               <h1 className="text-lg font-bold text-gray-700">
-                Problem Solution
+                Future-Ready Technology
               </h1>
             </div>
             {/**Description */}
             <p className="mt-3 mb-3 text-gray-700 leading-relaxed">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias quis consequatur esse amet possimus debitis assumenda
-              libero
+              Our solutions are built using modern technologies to ensure
+              your business stays competitive in a rapidly evolving market.
             </p>
           </div>
           {/**4th Box */}
@@ -96,23 +96,22 @@ const Features = () => {
             data-aos="fade-right"
             data-aos-anchor-placement="top-center"
             data-aos-delay="300"
-            className="bg-white p-4 rounded-lg"
+            className="bg-white p-4 rounded-lg h-full flex flex-col"
           >
             <div className="flex items-center space-x-3">
               {/**Icon */}
               <div className="w-12 h-12 rounded-3xl flex items-center justify-center flex-col bg-blue-500 bg-opacity-20">
-                <MdAccessAlarm className="w-6 h-6 text-blue-400" />
+                <LuLayers className="w-6 h-6 text-blue-400" />
               </div>
               {/**Heading */}
               <h1 className="text-lg font-bold text-gray-700">
-                LifeTime Access
+                Scalable Architecture
               </h1>
             </div>
             {/**Description */}
             <p className="mt-3 mb-3 text-gray-700 leading-relaxed">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias quis consequatur esse amet possimus debitis assumenda
-              libero
+              We design systems that grow with your business, ensuring
+              performance, security, and reliability at every stage.
             </p>
           </div>
         </div>

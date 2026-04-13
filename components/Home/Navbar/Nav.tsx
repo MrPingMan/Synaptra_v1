@@ -4,8 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 import { navLinks } from "@/constant/constant";
 import Link from "next/link";
-import { FaRegUser } from "react-icons/fa";
+import { FaRegUser,FaChevronDown } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+
 
 type NavProp = {
   openNav: () => void;
@@ -43,6 +44,31 @@ const Nav = ({ openNav }: NavProp) => {
         {/**Nav Link */}
         <div className="hidden lg:flex items-center space-x-10">
           {navLinks.map((link) => {
+            if(link.children){
+            return (
+              <div key={link.id} className="relative group">
+                <Link
+                  href={link.url}
+                  className="flex items-center gap-2 text-white font-sans text-xl hover:text-indigo-700 hover:text-2xl hover:bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 transition-all duration-200 px-4 py-2 rounded-md cursor-pointer"
+                >
+                  {link.label}
+                  <FaChevronDown className="w-3 h-3 text-white" />
+                </Link>
+                {/**Dropdown Menu */}
+                <div className="absolute top-full left-0 mt-2 w-60 rounded-md bg-white shadow-lg opacity-0 invisible pointer-events-none transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto">
+                  {link.children.map((child) => (
+                    <Link
+                      href={child.url}
+                      key={child.id}
+                      className="block px-5 py-3 text-gray-700 text-sm hover:bg-blue-50 hover:text-blue-600 transition first:rounded-t-lg last:rounded-b-lg"
+                    >
+                      {child.label} 
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          } 
             return (
               <Link
                 href={link.url}

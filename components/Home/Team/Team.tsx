@@ -46,8 +46,8 @@ const Team = () => {
               className="rounded-lg"
             />
             <div className="absolute w-full h-[5rem] bottom-0 p-4 bg-rose-500 rounded-lg">
-              <p className="text-lg text-white font-bold">Mark Zucker</p>
-              <p className="text-gray-300">(Founder)</p>
+              <p className="text-lg text-white font-bold">Balaji V.</p>
+              <p className="text-gray-300">(Founder & CEO)</p>
             </div>
           </div>
 
@@ -65,8 +65,8 @@ const Team = () => {
               className="rounded-lg"
             />
             <div className="absolute w-full h-[5rem] bottom-0 p-4 bg-orange-500 rounded-lg">
-              <p className="text-lg text-white font-bold">Victoria Mars</p>
-              <p className="text-gray-300">(Co-Founder)</p>
+              <p className="text-lg text-white font-bold">J. Suriya</p>
+              <p className="text-gray-300">(Co-Founder & Managing Director)</p>
             </div>
           </div>
         </div>

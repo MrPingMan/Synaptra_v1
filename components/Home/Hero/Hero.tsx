@@ -2,12 +2,12 @@
 import React from "react";
 import NeuralBackground from "./NeuralBackground";
 import Image from "next/image";
-import { FaStar } from "react-icons/fa";
-import { BsStarHalf } from "react-icons/bs";
+// import { FaStar } from "react-icons/fa";
+// import { BsStarHalf } from "react-icons/bs";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[110vh] sm:h-screen bg-gradient-to-t from-gray-800 via-blue-700 to-gray-900 overflow-hidden flex justify-center flex-col">
+    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex justify-center flex-col py-20 sm:py-16">
       {/* Neural Background */}
       <div className="absolute inset-0 -z-1">
         <NeuralBackground />
@@ -21,18 +21,15 @@ const Hero = () => {
             Welcome to Synaptra AI
           </p>
           <h1 className="text-2xl md:text-3xl lg:text-4xl mt-6 mb-6 font-bold text-white leading-[2.5rem] md:leading-[3.5rem]">
-            Kickstart, Scale and Thrive Faster with{" "}
+            Build, Launch and Scale Faster with{" "}
             <span className="text-fuchsia-500">Synaptra</span>
           </h1>
           <p className="text-xs sm:text-sm md:text-base font-medium text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ad
-            deserunt. Provident, possimus rerum nisi assumenda architecto earum
-            qui vero nihil ex quidem explicabo perferendis reprehenderit
-            consequuntur. Aliquid, quo placeat.
+            Synaptra helps startups and businesses build scalable web applications, launch digital products faster, and accelerate growth with modern technology and data-driven strategies.
           </p>
 
           {/* Ratings */}
-          <div className="flex sm:flex-row flex-col sm:items-center sm:space-x-10 mt-6">
+          {/* <div className="flex sm:flex-row flex-col sm:items-center sm:space-x-10 mt-6">
             <div className="flex items-center space-x-4">
               <Image
                 src="/google.png"
@@ -84,11 +81,11 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row w-fit sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <a
+            {/* <a
               href="#_"
               className="relative px-10 py-3 font-medium text-white transition duration-300 bg-rose-400 rounded-md hover:bg-rose-700 ease"
             >
@@ -121,7 +118,7 @@ const Hero = () => {
                 </svg>
               </span>
               <span className="relative">Get Free Trial</span>
-            </a>
+            </a> */}
 
             <a
               href="#_"

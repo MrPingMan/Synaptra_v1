@@ -20,13 +20,39 @@ const MobileNav = ({ closeNav, showNav }: NavProp) => {
       <div
         className={`fixed ${navOpen} justify-center flex flex-col h-full transform transition-all duration-500 delay-300 text-white w-[80%] sm:w-[60%] bg-blue-900 space-y-6 z-[300]`}
       >
-        {navLinks.map((link) => (
+        {navLinks.map((link) => {
+          if(link.children){
+            return (
+              <div key={link.id} className="ml-12">
+                <Link
+                  href={link.url}
+                  className="text-white w-fit text-[20px] border-b-[1.5px] pb-1 border-white sm:text-[30px] flex items-center gap-2"
+                >
+                  {link.label}
+                </Link>
+                {/**Dropdown Menu */}
+                <div className="ml-4 mt-2 flex flex-col gap-4">
+                  {link.children.map((child) => (
+                    <Link
+                      href={child.url}
+                      key={child.id}
+                      className="text-white hover:text-indigo-700 font-sans text-xl hover:text-2xl hover:bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 transition-all duration-200 px-4 py-2 rounded-md"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )
+          }
+          return (
           <Link href={link.url} key={link.id}>
             <p className="text-white w-fit text-[20px] ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px]">
               {link.label}
             </p>
           </Link>
-        ))}
+          )
+          })}
         {/**Close Button */}
         <CgClose
           onClick={closeNav}

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import "./globals.css";
+import GlobalBackground from "@/components/Background/GlobalBackground";
 import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 import Footer from "@/components/Home/Footer/Footer";
 import ScrolltoTop from "@/components/Helper/ScrolltoTop";
@@ -16,11 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <ResponsiveNav />
-        {children}
-        <Footer />
-        <ScrolltoTop />
+      <body className="relative bg-transparent">
+        <GlobalBackground />
+        <div className="relative z-10">
+          <ResponsiveNav />
+          {children}
+          <Footer />
+          <ScrolltoTop />
+        </div>
       </body>
     </html>
   );

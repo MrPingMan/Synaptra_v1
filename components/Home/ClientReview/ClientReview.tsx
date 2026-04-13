@@ -3,13 +3,13 @@ import ClientReviewCard from "./ClientReviewCard";
 
 const ClientReview = () => {
   return (
-    <div className="pt-16 pb-16 bg-gray-100">
+    <div className="pt-16 pb-16 bg-transparent">
       {/**heading */}
-      <div className="text-center text-2xl text-blue-900 font-bold">
+      <div className="text-center text-2xl text-blue-400 font-bold">
         What Our Happy Client Says
       </div>
       {/**sub heading */}
-      <p className="mt-3 text-centre font-medium text-gray-700 w-[90%] mx-auto sm:w-[70%] md-[50%]">
+      <p className="mt-3 text-centre font-medium text-gray-200 w-[90%] mx-auto sm:w-[70%] md-[50%]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magnam
         pariatur commodi maiores consequuntur a. Jasica Doe Jasica Doe 4.7 Lorem
         ipsum dolor sit amet consectetur adipisicing elit. Architecto rerum

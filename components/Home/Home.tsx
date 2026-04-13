@@ -4,9 +4,9 @@ import Hero from "./Hero/Hero";
 import About from "./About/About";
 import Features from "./Features/Features";
 import Services from "./Services/Services";
-import ClientReview from "./ClientReview/ClientReview";
-import Team from "./Team/Team";
-import PriceList from "./PriceList/PriceList";
+// import ClientReview from "./ClientReview/ClientReview";
+// import Team from "./Team/Team";
+// import PriceList from "./PriceList/PriceList";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -30,9 +30,9 @@ const Home = () => {
       <About />
       <Features />
       <Services />
-      <ClientReview />
-      <Team />
-      <PriceList />
+      {/* <ClientReview /> */}
+      {/* <Team /> */}
+      {/* <PriceList /> */}
     </div>
   );
 };
