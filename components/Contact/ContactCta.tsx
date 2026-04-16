@@ -13,7 +13,7 @@ const ContactCta = () => {
           drive real business results.
         </p>
         <a
-          href="#top"
+          href="#contact-form"
           className="mt-8 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition will-change-transform hover:-translate-y-0.5 hover:bg-cyan-100 sm:text-base"
         >
           Schedule a Consultation

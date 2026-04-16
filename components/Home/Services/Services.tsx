@@ -8,19 +8,46 @@ const Services = () => {
   return (
     <div className="pt-16 pb-16">
       <div className="w-[80%] mx-auto">
-        <BoxText>Our Services</BoxText>
-        {/**heading */}
-        <h1 className="mt-4 text-2xl md:text-3xl font-bold text-blue-300">
-          Our Core Services
-        </h1>
-        {/**description */}
-        <p className="mt-4 w-full sm:w-[80%] m:w-[70%] lg:e-[60%] xl:w-[50%] text-gray-200">
-          Synaptra delivers powerful technology solutions designed to help
-          businesses innovate, grow, and stay ahead in the digital era.
-          Our specialized teams focus on building scalable applications,
-          creating engaging digital experiences, and implementing
-          data-driven marketing strategies.
-        </p>
+        <div className="grid gap-10 xl:grid-cols-[0.95fr_0.9fr] xl:items-start">
+          <div>
+            <BoxText>Our Services</BoxText>
+            {/**heading */}
+            <h1 className="mt-4 text-2xl md:text-3xl font-bold text-blue-300">
+              Our Core Services
+            </h1>
+            {/**description */}
+            <p className="mt-4 w-full sm:w-[80%] m:w-[70%] lg:e-[60%] xl:w-[90%] text-gray-200">
+              Synaptra delivers powerful technology solutions designed to help
+              businesses innovate, grow, and stay ahead in the digital era.
+              Our specialized teams focus on building scalable applications,
+              creating engaging digital experiences, and implementing
+              data-driven marketing strategies.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/6 p-6 backdrop-blur-[6px] shadow-2xl shadow-slate-950/20">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">
+              From Strategy to Launch
+            </p>
+            <h2 className="mt-4 text-2xl font-bold text-white">
+              Everything your product needs in one focused team
+            </h2>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border border-white/10 bg-slate-950/25 p-4">
+                <p className="text-sm font-semibold text-white">Scalable Delivery</p>
+                <p className="mt-2 text-sm leading-6 text-slate-200">
+                  Product thinking, engineering, design, and growth support aligned from day one.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-slate-950/25 p-4">
+                <p className="text-sm font-semibold text-white">Business Focus</p>
+                <p className="mt-2 text-sm leading-6 text-slate-200">
+                  We build around measurable outcomes, performance, and long-term maintainability.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         {/**grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-center gap-y-12 mt-16">
           {/**1st service */}

@@ -5,7 +5,11 @@ import Image from "next/image";
 // import { FaStar } from "react-icons/fa";
 // import { BsStarHalf } from "react-icons/bs";
 
-const Hero = () => {
+type HeroProps = {
+  onOpenEnquiry: () => void;
+};
+
+const Hero = ({ onOpenEnquiry }: HeroProps) => {
   return (
     <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex justify-center flex-col py-20 sm:py-16">
       {/* Neural Background */}
@@ -120,11 +124,12 @@ const Hero = () => {
               <span className="relative">Get Free Trial</span>
             </a> */}
 
-            <a
-              href="#_"
-              className="relative px-10 py-3 font-medium text-white transition duration-300 bg-green-400 rounded-md hover:bg-green-700 ease"
+            <button
+              type="button"
+              onClick={onOpenEnquiry}
+              className="relative overflow-hidden rounded-full border border-cyan-200/20 bg-cyan-300 px-10 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-200"
             >
-              <span className="absolute bottom-0 left-0 h-full -ml-2">
+              <span className="absolute bottom-0 left-0 h-full -ml-2 opacity-70">
                 <svg
                   viewBox="0 0 487 487"
                   className="w-auto h-full opacity-100 object-stretch"
@@ -138,7 +143,7 @@ const Hero = () => {
                   ></path>
                 </svg>
               </span>
-              <span className="absolute top-0 right-0 w-12 h-full -mr-3">
+              <span className="absolute top-0 right-0 w-12 h-full -mr-3 opacity-70">
                 <svg
                   viewBox="0 0 487 487"
                   className="object-cover w-full h-full"
@@ -153,7 +158,7 @@ const Hero = () => {
                 </svg>
               </span>
               <span className="relative">Get Started</span>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -161,9 +166,18 @@ const Hero = () => {
         <div
           data-aos="fade-down"
           data-aos-delay="150"
-          className="mx-auto hidden xl:block relative z-10"
+          className="mx-auto hidden xl:block relative z-10 w-full max-w-[540px] xl:mt-10"
         >
-          <Image src="/hero.png" alt="Image" width={800} height={800} />
+          <div className="absolute inset-0 rounded-[2rem] bg-cyan-300/15 blur-3xl"></div>
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 backdrop-blur-[6px] shadow-2xl shadow-slate-950/20">
+            <Image
+              src="/img4.jpeg"
+              alt="Synaptra hero visual"
+              width={800}
+              height={800}
+              className="h-[440px] w-full rounded-[1.5rem] object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>

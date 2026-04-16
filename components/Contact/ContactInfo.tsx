@@ -4,13 +4,13 @@ import { LuClock3, LuMail, LuMapPin, LuPhone } from "react-icons/lu";
 const contactItems = [
   {
     label: "Phone",
-    value: "+91 XXXXX XXXXX",
+    value: "+91 98400 23195",
     icon: LuPhone,
     accent: "text-cyan-200 bg-cyan-300/12 ring-cyan-200/20",
   },
   {
     label: "Email",
-    value: "contact@synaptra.com",
+    value: "synaptrait@gmail.com",
     icon: LuMail,
     accent: "text-emerald-200 bg-emerald-300/12 ring-emerald-200/20",
   },

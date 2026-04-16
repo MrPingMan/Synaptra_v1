@@ -120,13 +120,17 @@ const Features = () => {
           data-aos="fade-left"
           data-aos-anchor-placement="top-center"
           data-aos-delay="400"
+          className="mx-auto w-full max-w-[540px]"
         >
-          <Image
-            src={"/f1.png"}
-            alt={"feture image"}
-            width={700}
-            height={700}
-          />
+          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 backdrop-blur-[6px] shadow-2xl shadow-slate-950/20">
+            <Image
+              src={"/img1.jpeg"}
+              alt={"feature image"}
+              width={700}
+              height={700}
+              className="h-[440px] w-full rounded-[1.5rem] object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>

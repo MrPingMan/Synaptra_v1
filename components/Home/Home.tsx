@@ -1,9 +1,10 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "./Hero/Hero";
 import About from "./About/About";
 import Features from "./Features/Features";
 import Services from "./Services/Services";
+import EnquiryPopup from "./EnquiryPopup";
 // import ClientReview from "./ClientReview/ClientReview";
 // import Team from "./Team/Team";
 // import PriceList from "./PriceList/PriceList";
@@ -11,6 +12,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Home = () => {
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+
   useEffect(() => {
     const initAOS = async () => {
       await import("aos");
@@ -26,10 +29,14 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      <Hero />
+      <Hero onOpenEnquiry={() => setIsEnquiryOpen(true)} />
       <About />
       <Features />
       <Services />
+      <EnquiryPopup
+        isOpen={isEnquiryOpen}
+        onClose={() => setIsEnquiryOpen(false)}
+      />
       {/* <ClientReview /> */}
       {/* <Team /> */}
       {/* <PriceList /> */}

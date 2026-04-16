@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+
 import CompanyHero from "./CompanyHero";
 import WhoWeAre from "./WhoWeAre";
 import Leadership from "./Leadership";
@@ -6,30 +9,36 @@ import TeamsIntro from "./TeamsIntro";
 import TeamShowcase from "./TeamShowcase";
 import MissionVision from "./MissionVision";
 import CompanyCta from "./CompanyCta";
+import EnquiryPopup from "../Home/EnquiryPopup";
 
 const CompanyPage = () => {
+
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+
   return (
     <div className="overflow-hidden">
-      {/* Company hero section */}
+
       <CompanyHero />
 
-      {/* About company section */}
       <WhoWeAre />
 
-      {/* Leadership section */}
       <Leadership />
 
-      {/* Teams introduction */}
       <TeamsIntro />
 
-      {/* Team showcase cards */}
       <TeamShowcase />
 
-      {/* Mission and vision section */}
       <MissionVision />
 
-      {/* Company CTA section */}
-      <CompanyCta />
+      {/* CTA */}
+      <CompanyCta onOpenEnquiry={() => setIsEnquiryOpen(true)} />
+
+      {/* Popup */}
+      <EnquiryPopup
+        isOpen={isEnquiryOpen}
+        onClose={() => setIsEnquiryOpen(false)}
+      />
+
     </div>
   );
 };

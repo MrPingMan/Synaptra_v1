@@ -15,7 +15,7 @@ const TeamShowcase = () => {
         />
         <TeamCard
           title="Mobile App Development Team"
-          lead="Gokula Vasan"
+          lead="Gokulavasan R."
           description="We specialize in creating seamless mobile experiences across Android, iOS, and cross-platform technologies. Our team builds intuitive applications that deliver excellent performance and modern user interfaces."
           accent="bg-emerald-300/12 text-emerald-200"
           imageSrc="/img2.jpeg"

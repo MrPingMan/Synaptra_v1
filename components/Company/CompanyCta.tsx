@@ -1,23 +1,35 @@
+"use client";
 import React from "react";
 
-const CompanyCta = () => {
+type CompanyCtaProps = {
+  onOpenEnquiry: () => void;
+};
+
+const CompanyCta = ({ onOpenEnquiry }: CompanyCtaProps) => {
   return (
     <section className="py-16 sm:py-20">
+
       {/* Company CTA card */}
       <div className="w-[90%] md:w-[80%] mx-auto rounded-[2.25rem] border border-cyan-200/20 bg-gradient-to-r from-cyan-400/10 via-white/8 to-emerald-300/10 p-8 text-center backdrop-blur-[6px] sm:p-12">
+
         <h2 className="text-3xl font-bold text-white sm:text-4xl">
           Let&apos;s Build the Future Together
         </h2>
+
         <p className="mx-auto mt-5 max-w-3xl text-sm leading-7 text-slate-200 sm:text-base sm:leading-8">
           Partner with Synaptra to transform your ideas into powerful digital
           solutions that drive innovation and business growth.
         </p>
-        <a
-          href="#top"
-          className="mt-8 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition will-change-transform hover:-translate-y-0.5 hover:bg-cyan-100 sm:text-base"
+
+        {/* Button opens enquiry popup */}
+        <button
+          type="button"
+          onClick={onOpenEnquiry}
+          className="mt-8 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-100 sm:text-base"
         >
           Start Your Project
-        </a>
+        </button>
+
       </div>
     </section>
   );

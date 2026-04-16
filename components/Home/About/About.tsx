@@ -7,8 +7,27 @@ const About = () => {
     <div className="pt-8 pb-16 sm:pt-10">
       <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/**Image Content */}
-        <div data-aos="zoom-in" data-aos-anchor-placement="top-center">
-          <Image src="/about3.png" alt="About Image" width={600} height={600} />
+        <div
+          data-aos="zoom-in"
+          data-aos-anchor-placement="top-center"
+          className="relative mx-auto w-full max-w-[540px]"
+        >
+
+          {/* Glow background */}
+          <div className="absolute inset-0 rounded-[2rem] bg-cyan-300/15 blur-3xl"></div>
+
+          {/* Glass container */}
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/6 p-4 backdrop-blur-[6px] shadow-2xl shadow-slate-950/20">
+
+            <Image
+              src="/about1.jpeg"
+              alt="About Image"
+              width={700}
+              height={700}
+              className="h-[420px] w-full rounded-[1.5rem] object-cover"
+            />
+
+          </div>
         </div>
         {/**Text Content */}
         <div>

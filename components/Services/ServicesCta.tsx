@@ -1,6 +1,11 @@
+"use client";
 import React from "react";
 
-const ServicesCta = () => {
+type ServicesCtaProps = {
+  onOpenEnquiry: () => void;
+};
+
+const ServicesCta = ({ onOpenEnquiry }: ServicesCtaProps) => {
   return (
     <section className="py-16 sm:py-20">
       {/* Final CTA card */}
@@ -14,13 +19,14 @@ const ServicesCta = () => {
           products. Our team is ready to help you design, build, and scale your
           next technology solution.
         </p>
-        {/* CTA button */}
-        <a
-          href="#top"
-          className="mt-8 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition will-change-transform hover:-translate-y-0.5 hover:bg-cyan-100 sm:text-base"
+        {/* Button opens popup */}
+        <button
+          type="button"
+          onClick={onOpenEnquiry}
+          className="mt-8 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-100 sm:text-base"
         >
           Start Your Project
-        </a>
+        </button>
       </div>
     </section>
   );
